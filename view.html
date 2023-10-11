@@ -87,6 +87,10 @@
 			color: #27C46B;
 			margin-right: 15px;
 		}
+		.action-icons .add i:hover {
+			color: #75ce9b;
+			margin-right: 15px;
+		}
 
 		.action-icons .edit i {
 			color: #FFC107;
@@ -96,10 +100,14 @@
 		.action-icons .edit i:hover {
 			color: #ffe28d;
 		}
+		.action-icons .home i {
+			color: #b62b2b;
+			margin-right: 15px;
+		}
 		
 
 		.action-icons .delete i {
-			color: #E34724;
+			color: #c26161;
 		}
 
 		table.table td i {
@@ -119,14 +127,15 @@
 			box-shadow: none;
 			border-radius: 2px;
 		}
-		table.table th:first-child,
+table.table th:first-child,
 table.table td:first-child {
-    width: 5%; /* Adjust the width as needed */
+    width: 6%; /* Adjust the width as needed */
+	align-items: center;
 }
 
 table.table th:nth-child(2),
 table.table td:nth-child(2) {
-    width: 20%; /* Adjust the width as needed */
+    width: 17%; /* Adjust the width as needed */
 }
 
 table.table th:nth-child(3),
@@ -141,7 +150,7 @@ table.table td:nth-child(4) {
 
 table.table th:nth-child(5),
 table.table td:nth-child(5) {
-    width: 35%; /* Adjust the width as needed */
+    width: 37%; /* Adjust the width as needed */
 }
 
 		table.table .form-control.error {
@@ -180,6 +189,10 @@ table.table td:nth-child(5) {
 			$(".edit").click(function () {
 				window.location.href = "edit.html";
 			});
+			// Redirect to "index.html" when the "Home" button is clicked
+			$(".home").click(function () {
+				window.location.href = "index.html";
+			});
 			// Delete row on delete button click
 			$(document).on("click", ".delete", function () {
 				$(this).parents("tr").remove();
@@ -216,9 +229,13 @@ table.table td:nth-child(5) {
 							<h2>List of Items in: <b>Upper Middle</b></h2>
 						</div>
 						<div class="action-icons">
-							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-							<a class="edit" title="Edit" data-toggle="tooltip"><i
-									class="material-icons">&#xE254;</i></a>
+							<a class="add" title="Add" data-toggle="tooltip">
+								<i class="material-icons">&#xE03B;</i></a>
+							<a class="edit" title="Edit" data-toggle="tooltip">
+								<i class="material-icons">&#xE254;</i></a>
+							<a class="home" title="Home" data-toggle="tooltip">
+								<i class="bi-house-door-fill"></i></a>
+							
 						</div>
 					
 				</div>
