@@ -42,6 +42,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const deleteButton = document.getElementById("deleteButton");
+
+    deleteButton.addEventListener("click", function () {
+        // Display a confirmation dialog
+        const confirmDelete = confirm("Are you sure you want to delete?");
+        
+        if (confirmDelete) {
+            // Perform the delete action here
+            // You can use AJAX to send a request to delete the item from the server
+
+            // For example, you can redirect to the delete endpoint:
+            window.location.href = "/delete-item?id=" + itemId;
+        }
+    });
+});
 
 
 		$(document).ready(function () {

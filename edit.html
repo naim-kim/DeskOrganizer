@@ -16,6 +16,20 @@
     <script src="scripts.js"></script>
 
 </head>
+<header class="py-3 mb-3 border-bottom">
+    <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+        <div>
+            <h1 class="titlefont">DeskOrganizer</h1>
+        </div>
+
+        <div class="d-flex align-items-center">
+            <form class="w-100 me-3" role="search">
+                <input type="search" class="form-control" id="mainsearchbar" placeholder="Search For Item..."
+                    aria-label="Search">
+            </form>
+        </div>
+    </div>
+</header>
 
 <body class="inputpage">
     <div class="inputcontainer">
@@ -23,17 +37,22 @@
         <form id="editForm">
             <div class="form-group">
                 <label for="date" class="form-label">Date:</label>
-                <input type="date" id="date" class="form-control"value="2026-06-20">
+                <input type="date" id="date" class="form-control" value="2026-06-20">
             </div>
 
             <div class="form-group">
                 <label class="form-label">Location:</label>
                 <div class="form-control">
-                    <label for="upperLeft"><input type="radio" id="upperLeft" name="location" value="Upper Left" required> Upper Left</label>
-                    <label for="upperMiddle"><input type="radio" id="upperMiddle" name="location" value="Upper Middle"> Upper Middle</label>
-                    <label for="upperRight"><input type="radio" id="upperRight" name="location" value="Upper Right"> Upper Right</label>
-                    <label for="lowerLeft"><input type="radio" id="lowerLeft" name="location" value="Lower Left"> Lower Left</label>
-                    <label for="lowerRight"><input type="radio" id="lowerRight" name="location" value="Lower Right"> Lower Right</label>
+                    <label for="upperLeft"><input type="radio" id="upperLeft" name="location" value="Upper Left"
+                            required> Upper Left</label>
+                    <label for="upperMiddle"><input type="radio" id="upperMiddle" name="location" value="Upper Middle">
+                        Upper Middle</label>
+                    <label for="upperRight"><input type="radio" id="upperRight" name="location" value="Upper Right">
+                        Upper Right</label>
+                    <label for="lowerLeft"><input type="radio" id="lowerLeft" name="location" value="Lower Left"> Lower
+                        Left</label>
+                    <label for="lowerRight"><input type="radio" id="lowerRight" name="location" value="Lower Right">
+                        Lower Right</label>
                 </div>
             </div>
 
@@ -50,27 +69,22 @@
                 <label for="details" class="form-label">Details (Comment):</label>
                 <textarea id="details" class="form-control">편두통용 약</textarea>
             </div>
-
-            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <div class="enter-buttons ">
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <button type="button" id="deleteButton" class="btn btn-danger">Delete</button>
+            </div>
         </form>
         <div class="container-fluid">
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-              <p class="col-md-4 mb-0 text-body-secondary">&copy; For Faster Navigation</p>
-        
-              <a href="/"
-                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <svg class="bi me-2" width="40" height="32">
-                  <use xlink:href="#bootstrap" />
-                </svg>
-              </a>
-              <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="add.html" class="nav-link px-2 text-body-secondary">Add</a></li>
-                <li class="nav-item"><a href="view.html" class="nav-link px-2 text-body-secondary">View</a></li>
-                <li class="nav-item"><a href="edit.html" class="nav-link px-2 text-body-secondary">Edit</a></li>
-              </ul>
+                <p class="col-md-4 mb-0 text-body-secondary">&copy; For Faster Navigation</p>
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                    <li class="nav-item"><a href="add.html" class="nav-link px-2 text-body-secondary">Add</a></li>
+                    <li class="nav-item"><a href="view.html" class="nav-link px-2 text-body-secondary">View</a></li>
+                    <li class="nav-item"><a href="edit.html" class="nav-link px-2 text-body-secondary">Edit</a></li>
+                </ul>
             </footer>
-          </div>
+        </div>
 </body>
 
 </html>
