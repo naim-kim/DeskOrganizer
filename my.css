@@ -228,6 +228,7 @@ table.table td a {
 .action-icons {
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
 }
 
 .action-icons .add i {
@@ -333,7 +334,7 @@ table.table td .add {
 }
 
 .star i {
-    cursor: pointer;
+    cursor:pointer;
     color: gray;
 }
 
