@@ -1,6 +1,5 @@
 // scripts.js
 
-
 document.addEventListener('DOMContentLoaded', function () {
     var editForm = document.getElementById('editForm');
     var addForm = document.getElementById('addForm');
@@ -13,17 +12,17 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Please fill in all required fields.');
             event.preventDefault(); // Prevent form submission
         } else {
-            // Show a confirmation message for adding or editing
             if (action === 'add') {
                 if (window.confirm('Are you sure you want to add this item?')) {
+                    // Redirect only after successful addition
                     alert('Item added successfully!');
                 } else {
                     event.preventDefault(); // Prevent form submission if the user cancels
                 }
             } else if (action === 'edit') {
                 if (window.confirm('Are you sure you want to save changes?')) {
+                    // Redirect only after successful edit
                     alert('Changes saved successfully!');
-                    window.location.href = "view.html";
                 } else {
                     event.preventDefault(); // Prevent form submission if the user cancels
                 }
