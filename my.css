@@ -40,11 +40,6 @@ header {
     src: url('fonts/SDSamliphopangcheBasic.otf') format('opentype');
 }
 
-@font-face {
-    font-family: 'CookieRunBlack';
-    src: url('fonts/CookieRun Black.otf') format('opentype');
-}
-
 .b-example-divider {
     width: 100%;
     height: 3rem;
