@@ -13,238 +13,13 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-	<style>
-		body {
-			color: #404E67;
-			background: lightgray;
-			font-family: 'Open Sans', sans-serif;
-
-		}
-
-		.table-wrapper {
-			width: 95%;
-			margin: 30px auto;
-			background: #fff;
-			padding: 20px;
-			box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-			border-radius: 10px;
-		}
-
-		.table-title {
-			padding-bottom: 10px;
-			margin: 0 0 10px;
-		}
-
-		.table-title h2 {
-			margin: 6px 0 0;
-			font-size: 22px;
-		}
-
-		.table-title .add-new {
-			float: right;
-			height: 30px;
-			font-weight: bold;
-			font-size: 12px;
-			text-shadow: none;
-			min-width: 100px;
-			border-radius: 50px;
-			line-height: 13px;
-		}
-
-		.table-title .add-new i {
-			margin-right: 4px;
-		}
-
-		table.table {
-			table-layout: fixed;
-
-		}
-
-		table.table tr th,
-		table.table tr td {
-			border-color: #e9e9e9;
-		}
-
-		table.table td a {
-			cursor: pointer;
-			display: inline-block;
-			margin: 0 5px;
-			min-width: 24px;
-		}
-
-		.action-icons {
-			display: flex;
-			justify-content: flex-end;
-
-		}
-
-		.action-icons .add i {
-			color: #27C46B;
-			margin-right: 15px;
-		}
-
-		.action-icons .add i:hover {
-			color: #75ce9b;
-			margin-right: 15px;
-		}
-
-		.action-icons .edit i {
-			color: #FFC107;
-			margin-right: 15px;
-
-		}
-
-		.action-icons .edit i:hover {
-			color: #ffe28d;
-		}
-
-		.action-icons .home i {
-			color: #b62b2b;
-			margin-right: 15px;
-		}
-
-
-		.action-icons .delete i {
-			color: #c26161;
-		}
-
-		table.table td i {
-			font-size: 19px;
-		}
-
-		table.table td a.add i {
-			font-size: 24px;
-			margin-right: -1px;
-			position: relative;
-			top: 3px;
-		}
-
-		.edit i.material-icons {
-			color: #FFC107;
-			font-size: 100%;
-			text-align: center;
-
-
-		}
-
-		.edit i.material-icons:hover {
-			color: #ffe28d;
-		}
-
-		table.table .form-control {
-			height: 32px;
-			line-height: 32px;
-			box-shadow: none;
-			border-radius: 2px;
-		}
-
-		table.table th:first-child,
-		table.table td:first-child {
-			width: 4%;
-			/* Adjust the width as needed */
-			text-align: center;
-		}
-
-		table.table th:nth-child(2),
-		table.table td:nth-child(2) {
-			width: 10%;
-			/* Adjust the width as needed */
-		}
-
-		table.table th:nth-child(3),
-		table.table td:nth-child(3) {
-			width: 10%;
-			/* Adjust the width as needed */
-		}
-
-		table.table th:nth-child(4),
-		table.table td:nth-child(4) {
-			width: 10%;
-			/* Adjust the width as needed */
-		}
-
-		table.table th:nth-child(5),
-		table.table td:nth-child(5) {
-			width: 10%;
-			/* Adjust the width as needed */
-		}
-
-		table.table th:nth-child(6),
-		table.table td:nth-child(6) {
-			width: 4%;
-			/* Adjust the width as needed */
-			text-align: center;
-		}
-
-		table.table .form-control.error {
-			border-color: #f50000;
-		}
-
-		table.table td .add {
-			display: none;
-		}
-
-		.star i {
-			cursor: pointer;
-			color: gray;
-		}
-
-		.star:hover i {
-			color: gold;
-		}
-
-		.star i.bi-star-fill {
-			color: gold;
-		}
-
-		.star i.bi-star-fill:hover {
-			color: gray;
-		}
-	</style>
-	<script>
-		$(document).ready(function () {
-			$('[data-toggle="tooltip"]').tooltip();
-
-			// Redirect to "add.html" when the "Add" button is clicked
-			$(".add").click(function () {
-				window.location.href = "add.html";
-			});
-
-			// Redirect to "edit.html" when the "Edit" button is clicked
-			$(".edit").click(function () {
-				window.location.href = "edit.html";
-			});
-			// Redirect to "index.html" when the "Home" button is clicked
-			$(".home").click(function () {
-				window.location.href = "index.html";
-			});
-			// Delete row on delete button click
-			$(document).on("click", ".delete", function () {
-				$(this).parents("tr").remove();
-				$(".add-new").removeAttr("disabled");
-			});
-			$('[data-toggle="tooltip"]').tooltip();
-
-			// Initialize a variable to track the click state
-			let isClicked = false;
-
-			// Handle the click event for the star icon
-			$(".star i.bi-star").click(function () {
-				$(this).removeClass("bi-star");
-				$(this).addClass("bi-star-fill");
-				isClicked = true;
-			});
-
-			$(".star i.bi-star-fill").click(function () {
-				$(this).removeClass("bi-star-fill");
-				$(this).addClass("bi-star");
-				isClicked = false;
-			});
-		});
-	</script>
+	<link rel="stylesheet" href="my.css" />
+	<script src="scripts.js"></script>
+	
+	
 </head>
 
-<body>
+<body class="view">
 	<div class="container-lg">
 		<div class="table-responsive">
 			<div class="table-wrapper">
@@ -276,7 +51,7 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td class="star"><i class="bi-star-fill"></i></td>
+							<td class="star"><i class="bi-star"></i></td>
 							<td>2026/06/08</td>
 							<td>Upper Middle</td>
 							<td>Medicine</td>
@@ -309,6 +84,24 @@
 			</div>
 		</div>
 	</div>
+	<div class="container-fluid">
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		  <p class="col-md-4 mb-0 text-body-secondary">&copy; For Faster Navigation</p>
+	
+		  <a href="/"
+			class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+			<svg class="bi me-2" width="40" height="32">
+			  <use xlink:href="#bootstrap" />
+			</svg>
+		  </a>
+		  <ul class="nav col-md-4 justify-content-end">
+			<li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+			<li class="nav-item"><a href="add.html" class="nav-link px-2 text-body-secondary">Add</a></li>
+			<li class="nav-item"><a href="view.html" class="nav-link px-2 text-body-secondary">View</a></li>
+			<li class="nav-item"><a href="edit.html" class="nav-link px-2 text-body-secondary">Edit</a></li>
+		  </ul>
+		</footer>
+	  </div>
 </body>
 
 </html>

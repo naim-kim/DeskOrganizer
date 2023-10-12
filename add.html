@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Edit Item</title>
+    <title>Add Item</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -12,55 +12,35 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <style>
-        body {
-            color: #404E67;
-            background: lightgray;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        .container {
-            margin: 30px auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-            border-radius: 10px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="my.css" />
+    <script src="scripts.js"></script>
 </head>
 
-<body>
-    <div class="container">
-        <h2>Edit Item</h2>
-        <form>
+<body class="inputpage">
+    <div class="inputcontainer">
+        <h2>Add Item</h2>
+        <form id="addForm">
             <div class="form-group">
                 <label for="date" class="form-label">Date:</label>
-    <input type="date" id="date" class="form-control" value="2026-06-08">
+    <input type="date" id="date" class="form-control">
                 
             </div>
 
             <div class="form-group">
-                <label for="location" class="form-label">Location:</label>
-                <select id="location" class="form-control">
-                    <option value="Upper Left">Upper Left</option>
-                    <option value="Upper Middle">Upper Middle</option>
-                    <option value="Upper Right">Upper Right</option>
-                    <option value="Lower Left">Lower Left</option>
-                    <option value="Lower Right">Lower Right</option>
-                </select>
+                <label class="form-label">Location:</label>
+                <div class="form-control">
+                    <label for="upperLeft"><input type="radio" id="upperLeft" name="location" value="Upper Left"> Upper Left</label>
+                    <label for="upperMiddle"><input type="radio" id="upperMiddle" name="location" value="Upper Middle"> Upper Middle</label>
+                    <label for="upperRight"><input type="radio" id="upperRight" name="location" value="Upper Right"> Upper Right</label>
+                    <label for="lowerLeft"><input type="radio" id="lowerLeft" name="location" value="Lower Left"> Lower Left</label>
+                    <label for="lowerRight"><input type="radio" id="lowerRight" name="location" value="Lower Right"> Lower Right</label>
+                </div>
             </div>
 
             <div class="form-group">
                 <label for="itemType" class="form-label">Item Type:</label>
-                <select id="itemType" class="form-control">
+                <select id="itemType" class="form-control" >
+                    <option value="" disabled selected>Select Type</option>
                     <option value="Medicine">Medicine</option>
                     <option value="Sport">Sport</option>
                     <!-- Add more item types here -->
@@ -69,12 +49,30 @@
 
             <div class="form-group">
                 <label for="details" class="form-label">Details (Comment):</label>
-                <textarea id="details" class="form-control">편두통용 약</textarea>
+                <textarea id="details" class="form-control" placeholder="Write details of your item"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="submit" class="btn btn-primary">Add Item</button>
         </form>
     </div>
+    <div class="container-fluid">
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		  <p class="col-md-4 mb-0 text-body-secondary">&copy; For Faster Navigation</p>
+	
+		  <a href="/"
+			class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+			<svg class="bi me-2" width="40" height="32">
+			  <use xlink:href="#bootstrap" />
+			</svg>
+		  </a>
+		  <ul class="nav col-md-4 justify-content-end">
+			<li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+			<li class="nav-item"><a href="add.html" class="nav-link px-2 text-body-secondary">Add</a></li>
+			<li class="nav-item"><a href="view.html" class="nav-link px-2 text-body-secondary">View</a></li>
+			<li class="nav-item"><a href="edit.html" class="nav-link px-2 text-body-secondary">Edit</a></li>
+		  </ul>
+		</footer>
+	  </div>
 </body>
 
 </html>
